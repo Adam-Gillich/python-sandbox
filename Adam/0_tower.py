@@ -7,3 +7,5 @@ for i in range(height):
 
     if a == height:
         break
+
+input('\nPress Enter to finish')
