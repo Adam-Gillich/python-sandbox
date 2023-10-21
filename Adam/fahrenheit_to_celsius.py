@@ -14,28 +14,24 @@ def f_convert_to_c(f):
     print(f'{f} °F converted to Celsius is: {convert_to_c} °C')
 
 
+def lorem_ipsum(unit):
+    while True:
+        try:
+            value = float(input(f'\nWhat {unit} value do you want to convert: ').replace(',', '.'))
+        except ValueError:
+            cprint('\nYou can only use numbers.', color='red', force_color=True)
+            continue
+        return value
+
+
 def decide():
     while True:
         d = input('Which method do you want to use?\nCelsius to Fahrenheit (c)\nFahrenheit to Celsius (f)\n').strip()
         if d == "c":
-            while True:
-                try:
-                    celsius = float(input('\nWhat °C value do you want to convert: ').replace(',', '.'))
-                except ValueError:
-                    cprint('\nYou can only use numbers.', color='red', force_color=True)
-                    continue
-                c_convert_to_f(celsius)
-                break
+            c_convert_to_f(lorem_ipsum('°C'))
             break
         elif d == "f":
-            while True:
-                try:
-                    fahrenheit = float(input('\nWhat °F value do you want to convert: ').replace(',', '.'))
-                except ValueError:
-                    cprint('\nYou can only use numbers.', color='red', force_color=True)
-                    continue
-                f_convert_to_c(fahrenheit)
-                break
+            f_convert_to_c(lorem_ipsum('°F'))
             break
         else:
             cprint('You can only answer c or f.\n', color='red', force_color=True)
