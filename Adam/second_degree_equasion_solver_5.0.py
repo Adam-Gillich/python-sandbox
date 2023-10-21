@@ -1,4 +1,5 @@
 import math
+from termcolor import cprint
 
 
 def tryfloat(i):
@@ -8,39 +9,35 @@ def tryfloat(i):
         return i
 
 
-def error_messages(i):
-    if i == 0:
-        print('A másodfokú tag nem lehet 0!')
-    if i != 0:
-        print('Csak számokat írhatsz be!')
-
-
 while True:
-    a_str = str(input('Add meg a másodfokú tagot: ')).replace(',', '.')
+    a_str = str(input('Add meg a másodfokú tagot: ')).replace(',', '.').strip()
 
     a = tryfloat(a_str)
 
     if isinstance(a, (int, float)) and a != 0:
         break
-    error_messages(a)
+    if a == 0:
+        cprint('A másodfokú tag nem lehet 0!', color='red', force_color=True)
+    if a != 0:
+        cprint('Csak számokat írhatsz be!', color='red', force_color=True)
 
 while True:
-    b_str = str(input('Add meg az elsőfokú tagot: ')).replace(',', '.')
+    b_str = str(input('Add meg az elsőfokú tagot: ')).replace(',', '.').strip()
 
     b = tryfloat(b_str)
 
     if isinstance(b, (int, float)):
         break
-    print('Csak számokat írhatsz be!')
+    cprint('Csak számokat írhatsz be!', color='red', force_color=True)
 
 while True:
-    c_str = str(input('Add meg a számot: ')).replace(',', '.')
+    c_str = str(input('Add meg a számot: ')).replace(',', '.').strip()
 
     c = tryfloat(c_str)
 
     if isinstance(c, (int, float)):
         break
-    print('Csak számokat írhatsz be!')
+    cprint('Csak számokat írhatsz be!', color='red', force_color=True)
 
 d = (b ** 2) - (4 * a * c)
 
