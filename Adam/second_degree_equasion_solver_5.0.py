@@ -2,7 +2,7 @@ import math
 from termcolor import cprint
 
 
-def lorem_ipsum(text):
+def input_float(text):
     while True:
         try:
             value = float(input(text).replace(',', '.').strip())
@@ -13,14 +13,14 @@ def lorem_ipsum(text):
 
 
 while True:
-    a = lorem_ipsum('Add meg a másodfokú tagot: ')
+    a = input_float('Add meg a másodfokú tagot: ')
     if a == 0:
         cprint('A másodfokú tag nem lehet 0!', color='red', force_color=True)
     else:
         break
 
-b = lorem_ipsum('Add meg az elsőfokú tagot: ')
-c = lorem_ipsum('Add meg a számot: ')
+b = input_float('Add meg az elsőfokú tagot: ')
+c = input_float('Add meg a számot: ')
 
 
 d = (b ** 2) - (4 * a * c)
