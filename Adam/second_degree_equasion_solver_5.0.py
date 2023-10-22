@@ -2,42 +2,26 @@ import math
 from termcolor import cprint
 
 
-def tryfloat(i):
-    try:
-        return float(i)
-    except ValueError:
-        return i
+def lorem_ipsum(text):
+    while True:
+        try:
+            value = float(input(text).replace(',', '.').strip())
+        except ValueError:
+            cprint('Csak számokat írhatsz be!', color='red', force_color=True)
+            continue
+        return value
 
 
 while True:
-    a_str = str(input('Add meg a másodfokú tagot: ')).replace(',', '.').strip()
-
-    a = tryfloat(a_str)
-
-    if isinstance(a, (int, float)) and a != 0:
-        break
+    a = lorem_ipsum('Add meg a másodfokú tagot: ')
     if a == 0:
         cprint('A másodfokú tag nem lehet 0!', color='red', force_color=True)
-    if a != 0:
-        cprint('Csak számokat írhatsz be!', color='red', force_color=True)
-
-while True:
-    b_str = str(input('Add meg az elsőfokú tagot: ')).replace(',', '.').strip()
-
-    b = tryfloat(b_str)
-
-    if isinstance(b, (int, float)):
+    else:
         break
-    cprint('Csak számokat írhatsz be!', color='red', force_color=True)
 
-while True:
-    c_str = str(input('Add meg a számot: ')).replace(',', '.').strip()
+b = lorem_ipsum('Add meg az elsőfokú tagot: ')
+c = lorem_ipsum('Add meg a számot: ')
 
-    c = tryfloat(c_str)
-
-    if isinstance(c, (int, float)):
-        break
-    cprint('Csak számokat írhatsz be!', color='red', force_color=True)
 
 d = (b ** 2) - (4 * a * c)
 
