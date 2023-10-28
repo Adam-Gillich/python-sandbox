@@ -34,7 +34,7 @@ def counter(text):
     if len(longest_word) == 0:
         return "00"
     else:
-        return longest_word
+        return print('That is the longest even number word: ', longest_word)
 
 
 print(''.join(counter(input('Give a text: '))))
