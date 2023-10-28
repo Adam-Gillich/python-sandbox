@@ -39,8 +39,3 @@ def counter(text):
 
 print(''.join(counter(input('Give a text: '))))
 
-"""
-repls = ('hello', 'goodbye'), ('world', 'earth')
-s = 'hello, world'
-reduce(lambda a, kv: a.replace(*kv), repls, s)
-"""
