@@ -39,3 +39,9 @@ def counter(text):
 
 print(''.join(counter(input('Give a text: '))))
 
+
+def splits(text, delimiters):
+    d0 = delimiters[0]
+    for d in delimiters:
+        text = text.replace(d, d0)
+    return text.split(d0)
