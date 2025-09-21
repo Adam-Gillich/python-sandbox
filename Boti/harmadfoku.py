@@ -1,6 +1,6 @@
 import sympy
 
-#ax^3 + bx^3 + cx + d = 0
+print("A harmadfokú egyenlet formátuma: ax^3 + bx^3 + cx + d = 0")
 a = float(input("Add meg az 'a' értékét: "))
 b = float(input("Add meg az 'b' értékét: "))
 c = float(input("Add meg az 'c' értékét: "))
