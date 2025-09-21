@@ -1,0 +1,91 @@
+Kerbol:
+  alt_name: "ker"
+  std_grav_para: 1.1723328e18
+  R: 261600000
+  SOI: infinite
+  Atmosphere: 600000
+Moho:
+  alt_name: "mo"
+  std_grav_para: 1.6860938e11
+  R: 250000
+  SOI: 9646663
+Eve:
+  alt_name: "e"
+  std_grav_para: 8.1717302e12
+  R: 700000
+  SOI: 85109365
+  Atmosphere: 90000
+Gilly:
+  alt_name: "g"
+  std_grav_para: 8289449.8
+  R: 13000
+  SOI: 126123.27
+Kerbin:
+  alt_name: "k"
+  std_grav_para: 3.5316000e12
+  R: 600000
+  SOI: 84159286
+  Atmosphere: 70000
+Mun:
+  alt_name: "mu"
+  std_grav_para: 6.5138398e10
+  R: 200000
+  SOI: 2429559.1
+Minmus:
+  alt_name: "mi"
+  std_grav_para: 1.7658000e9
+  R: 60000
+  SOI: 2247428.4
+Duna:
+  alt_name: "d"
+  std_grav_para: 3.0136321e11
+  R: 320000
+  SOI: 47921949
+  Atmosphere: 50000
+Ike:
+  alt_name: "i"
+  std_grav_para: 1.8568369e10
+  R: 130000
+  SOI: 1049598.9
+Dres:
+  alt_name: "dr"
+  std_grav_para: 2.1484489e10
+  R: 138000
+  SOI: 32832840
+Jool:
+  alt_name: "j"
+  std_grav_para: 2.8252800e14
+  R: 6000000
+  SOI: 2.4559852e9
+  Atmosphere: 200000
+Laythe:
+  alt_name: "l"
+  std_grav_para: 1.9620000e12
+  R: 500000
+  SOI: 3723645.8
+  Atmosphere: 50000
+Vall:
+  alt_name: "v"
+  std_grav_para: 2.0748150e11
+  R: 300000
+  SOI: 2406401.4
+Tylo:
+  alt_name: "t"
+  std_grav_para: 2.8252800e12
+  R: 600000
+  SOI: 10856518
+Bop:
+  alt_name: "b"
+  std_grav_para: 2.4868349e9
+  R: 65000
+  SOI: 1221060.9
+Pol:
+  alt_name: "p"
+  std_grav_para: 7.2170208e8
+  R: 44000
+  SOI: 1042138.9
+Eeloo:
+  alt_name: "ee"
+  std_grav_para: 7.4410815e10
+  R: 210000
+  SOI: 1.1908294e8
