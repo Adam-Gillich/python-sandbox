@@ -9,10 +9,12 @@ def f(s, sl, vl, v1, v2):
     sl += s / (v1 / vl + 1)
     t1 = (s / (v1 / vl + 1)) / vl
     s -= t1 * (v1 + v2)
+#    print(f"A maradék út = {s} méter\n")
 
     sl += s / (v2 / vl + 1)
     t2 = (s / (v2 / vl + 1)) / vl
     s -= t2 * (v1 + v2)
+    print(f"A maradék út = {s} méter\n")
 
     return s, sl
 
@@ -48,11 +50,11 @@ def h(s, sl, vl, v1, v2):
     return h(s, sl, vl, v1, v2)
 
 
-s, sl = h(s, sl, vl, v1, v2)
+#s, sl = h(s, sl, vl, v1, v2)
 
-# for i in range(10):
-#    s, sl = f(s, sl, vl, v1, v2)
+for i in range(10):
+    s, sl = f(s, sl, vl, v1, v2)
 #    s, sl = g(s, sl, vl, v1, v2)
 
-print(f"A légy {sl} métert tett meg! \nA két kerékpáros közt maradt út:\n   {s}")
+print(f"A légy {sl} métert tett meg! \nA két kerékpáros közt maradt út:\n   {s} méter")
 print("\n\n\n\n\n")
