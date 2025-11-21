@@ -81,7 +81,8 @@ choose_txt = "Choose the body where you want your Relay Network to be:\n" \
 def choose_body():
     try:
         key = input(choose_txt)
-        name = config[key]
+        temp = config[key]
+        name = key
         return name
     except KeyError:
         for i in config.keys():
@@ -91,7 +92,8 @@ def choose_body():
         while True:
             try:
                 key = input("\nSomething went wrong! The names are case sensitive!\n  Try again!\n")
-                name = config[key]
+                temp = config[key]
+                name = key
                 return name
             except KeyError:
                 for i in config.keys():
@@ -159,6 +161,13 @@ hp, T, T23 = orbit_calculator(R, requested_height, std_grav_para, SatNumVar)
 end_period = time_converter(T)
 phasing_period = time_converter(T23)
 
+if requested_height < hp:
+    Apo = hp
+    Peri = requested_height
+else:
+    Apo = requested_height
+    Peri = hp
+
 print(f"\n\n\n"
       f"You requested a satellite network around: {name}, with {SatNum} satellites!\n"
       f"You set the height of the network to {requested_height} meters!\n"
@@ -167,8 +176,8 @@ print(f"\n\n\n"
       f"It's period should be {f'{end_period[0]}d:' if end_period[0] > 0 else ''}{end_period[1]}h:{end_period[2]}m:{end_period[3]}s.\n"
       f"\n"
       f"To achieve that, your phasing orbit's\n"
-      f"Apoapsis should be: {requested_height} meters\n"
-      f"Periapsis should be: {hp} meters\n"
+      f"Apoapsis should be: {Apo} meters\n"
+      f"Periapsis should be: {Peri} meters\n"
       f"With a period of {f'{phasing_period[0]}d:' if phasing_period[0] > 0 else ''}{phasing_period[1]}h:{phasing_period[2]}m:{phasing_period[3]}s\n"
       f"\n"
       f"Try to match these values as close as you can!\nGood Luck!")
